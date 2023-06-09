@@ -76,9 +76,9 @@ class DownloadSong:
     SUCCESSFUL_DOWNLOAD_MSG = "has been successfully downloaded."
     EXCEPTION_MSG = "An error occurred:"
 
-    def __init__(self, song_searcher: SongSearch,
+    def __init__(self,
                  file_format: str):
-        self.song_searcher = song_searcher
+
         self.file_format = file_format
 
     def download_audio(self,
@@ -132,9 +132,7 @@ class ManageApp:
                                          "video",
                                          "viewCount"
                                         )
-        self.audio_downloader = DownloadSong(self.audio_searcher,
-                                            ".mp3"
-                                            )
+        self.audio_downloader = DownloadSong(".mp3")
 
         self.creating_songs = True
 
